@@ -53,6 +53,7 @@ const updateRepoSection = (data) => {
             let linkElem = createElem('a', display_link);
 
             linkElem.href = repo.homepage; // Add url to <a>
+            linkElem.target = "_blank";
 
             articleElement.appendChild(linkElem);
         }
