@@ -12,4 +12,4 @@
 [[redirects]]
     from = "/ga"
     to = "https://github.com/ohman-emil/GA"
-    status = 301%
+    status = 301
