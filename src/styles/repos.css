@@ -1,0 +1,33 @@
+main section#repos {
+    margin-top: 15px;
+}
+
+section#repos article {
+    margin: 10px;
+    border: black 2px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+section#repos article h3 {
+    display: inline-block;
+}
+
+section#repos article h3:hover {
+    text-decoration: underline;
+}
+
+section#repos article .lang-dot {
+    width: 0.5em;
+    height: 0.5em;
+    background: black;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-bottom: -2px;
+    display: inline-block;
+}
+
+section#repos article p:has(.lang-dot) {
+    display: flex;
+    align-items: center;
+}

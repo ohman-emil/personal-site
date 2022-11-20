@@ -1,0 +1,19 @@
+{
+  "name": "personal_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "bundle": "rollup --config",
+    "dev": "rollup --config --environment NODE_ENV:dev"
+  },
+  "keywords": [],
+  "author": "Emil Öhman",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.1.0",
+    "rollup": "^3.3.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
+}
