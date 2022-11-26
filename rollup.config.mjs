@@ -5,10 +5,14 @@ import copy from 'rollup-plugin-copy';
 const devMode = (process.env.NODE_ENV === 'dev');
 
 const minimizeHTML = (HTML) => {
-    return HTML.toString()
+    let parsedString = HTML.toString()
         .replaceAll(/\n\s*/g, '') // Remove line breaks
         .replaceAll(/>(\s+)</g, '><') // Remove space between tags
         .replaceAll(/<!--(.+?)-->/g, ''); // Remove comments
+    
+    let preamp = `<!-- Bundled ${new Date().toISOString()} -->`; // Add bundled date
+
+    return `${preamp}\n${parsedString}`
 };
 
 export default [{
