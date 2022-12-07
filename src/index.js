@@ -64,7 +64,7 @@ const updateRepoSection = (data) => {
 
             let langdotElem = createElem('i', null);
             langdotElem.classList.add('lang-dot'); // Add lang-dot to class list
-            langdotElem.style.backgroundColor = colors[repo.language] || 'black'; // Change background color to language specific one.
+            langdotElem.style.backgroundColor = colors[repo.language] || 'var(--text-main)'; // Change background color to language specific one.
             
             // Append dot element to language element before the first child; i.e. put it first.
             langElem.insertBefore(langdotElem, langElem.firstChild);

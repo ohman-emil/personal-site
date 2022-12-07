@@ -8,6 +8,16 @@
     --text-sec: #ffffff;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-main: #2f3949;
+        --text-main: #ffffff;
+        --bg-sec: #0a0f1a;
+        --bg-sec-lighter: #4f5971;
+        --text-sec: #000;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

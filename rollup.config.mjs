@@ -58,11 +58,7 @@ export default [{
                     dest: 'dist/assets'
                 },
                 {
-                    src: 'manifest.json',
-                    dest: 'dist'
-                },
-                {
-                    src: 'robots.txt',
+                    src: ['manifest.json', 'robots.txt'],
                     dest: 'dist'
                 }
             ]

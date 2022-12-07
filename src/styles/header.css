@@ -14,7 +14,7 @@ header {
 header .textbox {
     width: 40%;
     min-height: 50%;
-    background: white;
+    background: var(--bg-main);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ header nav {
 header nav a {
     display: flex;
     align-items: center;
-    border: var(--bg-sec) 3px solid;
+    border: var(--text-main) 3px solid;
     border-radius: 5px;
     padding: 5px;
     margin: 10px;
@@ -58,6 +58,10 @@ header nav a .icon {
     width: 1.5em;
     height: 1.5em;
     display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+    header nav a .icon {filter: invert(1)}
 }
 
 header nav a .github::before {content: url(/assets/github.svg);}

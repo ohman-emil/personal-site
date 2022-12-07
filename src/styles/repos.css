@@ -4,7 +4,7 @@ main section#repos {
 
 section#repos article {
     margin: 10px;
-    border: black 2px solid;
+    border: var(--text-main) 2px solid;
     padding: 10px;
     border-radius: 10px;
 }
@@ -20,7 +20,7 @@ section#repos article h3:hover {
 section#repos article .lang-dot {
     width: 0.5em;
     height: 0.5em;
-    background: black;
+    background: var(--text-main);
     border-radius: 50%;
     margin-right: 5px;
     margin-bottom: -2px;
