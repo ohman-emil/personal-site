@@ -74,10 +74,16 @@ const updateRepoSection = (data) => {
 
         // Repo date
         if (repo.pushed_at) {
-            let date = new Date(repo.pushed_at).toLocaleDateString();
-            articleElement.appendChild(
-                createElem('p', `Last updated ${date}`)
-            );
+            let date = new Date(repo.pushed_at)
+            let formattedDare = date.toLocaleDateString();
+
+            let timeElem = createElem('time', formattedDare);
+            timeElem.dateTime = date.toISOString();
+
+            let paragraphElement = createElem('p', `Last updated `);
+            paragraphElement.appendChild(timeElem);
+
+            articleElement.appendChild(paragraphElement);
         }
 
         document.getElementById('repos').appendChild(articleElement);
