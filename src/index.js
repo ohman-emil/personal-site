@@ -2,6 +2,8 @@
 import './styles/main.css';
 import './styles/header.css';
 import './styles/repos.css';
+import './styles/colors.css';
+import './styles/dialog.css';
 
 // Import GitHub colors
 import { colors } from './gh-colors';

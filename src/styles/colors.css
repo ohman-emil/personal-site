@@ -1,0 +1,30 @@
+:root {
+    --bg-main: #ffffff;
+    --text-main: #000000;
+
+    --bg-sec: #2f3949;
+    --bg-sec-lighter: #4f5971;
+    --text-sec: #ffffff;
+
+    --error-bg: #ffaaaa;
+    --error-border: #ff0000;
+
+    --warning-bg: #ffffaa;
+    --warning-border: #ffff00;
+
+    --success-bg: #aaffaa;
+    --success-border: #00ff00;
+
+    --info-bg: #97defe;
+    --info-border: #2590ff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-main: #2f3949;
+        --text-main: #ffffff;
+        --bg-sec: #0a0f1a;
+        --bg-sec-lighter: #4f5971;
+        --text-sec: #000;
+    }
+}

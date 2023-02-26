@@ -1,0 +1,99 @@
+dialog.banner { 
+    width: auto;
+    border-radius: 5px;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    display: none; /* Do not show the dialog unless open property is present */
+    color: var(--text-main);
+}
+
+dialog.banner[open] { /* Only show dialog if the open property is present */
+    display: flex;
+    animation: openBanner 0.5s ease-in-out normal;
+}
+
+dialog.banner.error {
+    background: var(--error-bg);
+    border: 1px solid var(--error-border);
+}
+dialog.banner.warning {
+    background: var(--warning-bg);
+    border: 1px solid var(--warning-border);
+}
+dialog.banner.success {
+    background: var(--success-bg);
+    border: 1px solid var(--success-border);
+}
+dialog.banner.info {
+    background: var(--info-bg);
+    border: 1px solid var(--info-border);
+}
+
+dialog.banner p {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+dialog.banner p::before {
+    content: "";
+    display: inline-block;
+    width: 1.25em;
+    margin-right: 10px;
+    line-height: 0;
+}
+
+dialog.banner.error p::before {content: url(/assets/bannericons/error.svg)}
+dialog.banner.warning p::before {content: url(/assets/bannericons/warning.svg);}
+dialog.banner.success p::before {content: url(/assets/bannericons/success.svg);}
+dialog.banner.info p::before {content: url(/assets/bannericons/info.svg);}
+
+dialog.banner form {
+    margin: 10px;
+    display: block;
+}
+
+dialog.banner form button {
+    background: #ffffff56;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 2em;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-indent: 100%; /* Hide close text */
+    width: 2em;
+}
+
+dialog.banner form button::before, dialog.banner form button::after {
+    content: "";
+    position: absolute;
+    background-color: var(--text-main);
+    top: 12.5%;
+    left: calc(50% - 0.0625em);
+    width: 0.125em;
+    height: 75%;
+    transition-duration: 0.5s;
+}
+
+dialog.banner form button::before {transform: rotate(45deg);}
+dialog.banner form button::after {transform: rotate(-45deg);}
+
+dialog.banner form button:hover::before {transform: rotate(-45deg);}
+dialog.banner form button:hover::after {transform: rotate(45deg);}
+
+@keyframes openBanner {
+    0% {
+        transform: translateY(-150%);
+    }
+    84% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
