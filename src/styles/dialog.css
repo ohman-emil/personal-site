@@ -8,6 +8,13 @@ dialog.banner {
     margin: 10px;
     display: none; /* Do not show the dialog unless open property is present */
     color: var(--text-main);
+    position: fixed;
+    top: 0;
+    border-style: solid;
+    border-width: 2px;
+
+    background: var(--bg-main);
+    border-color: var(--bg-sec-lighter);
 }
 
 dialog.banner[open] { /* Only show dialog if the open property is present */
@@ -17,19 +24,19 @@ dialog.banner[open] { /* Only show dialog if the open property is present */
 
 dialog.banner.error {
     background: var(--error-bg);
-    border: 1px solid var(--error-border);
+    border-color: var(--error-border);
 }
 dialog.banner.warning {
     background: var(--warning-bg);
-    border: 1px solid var(--warning-border);
+    border-color: var(--warning-border);
 }
 dialog.banner.success {
     background: var(--success-bg);
-    border: 1px solid var(--success-border);
+    border-color: var(--success-border);
 }
 dialog.banner.info {
     background: var(--info-bg);
-    border: 1px solid var(--info-border);
+    border-color: var(--info-border);
 }
 
 dialog.banner p {

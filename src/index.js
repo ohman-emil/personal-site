@@ -23,6 +23,29 @@ const createElem = (elementName, elementText) => {
     return element // Return element
 };
 
+const createBanner = (text, type) => {
+    // Add the banner text
+    let bannerText = createElem('p', text);
+
+    // Form for close button
+    let formElem = createElem('form');
+    formElem.setAttribute('method', 'dialog');
+
+    let closeButton = createElem('button', 'Close');
+    closeButton.setAttribute('autofocus', '');
+    formElem.appendChild(closeButton);
+
+    // Create dialog element
+    let bannerElem = createElem('dialog');
+    bannerElem.classList.add('banner', type);
+    bannerElem.setAttribute('open', '');
+
+    bannerElem.appendChild(bannerText);
+    bannerElem.appendChild(formElem);
+
+    document.body.appendChild(bannerElem);
+};
+
 // A function which updates the repositories section. Takes the GitHub api response as input.
 const updateRepoSection = (data) => {
 
@@ -111,4 +134,8 @@ fetch('https://api.github.com/users/ohman-emil/repos')
     .then(_ => document.getElementById('repos').style.display = 'block')
     
     // Error handling
-    .catch(e => console.log(e));
+    .catch(e => {
+        console.error(e);
+
+        createBanner('Could not fetch data from GitHub', 'error');
+    });
