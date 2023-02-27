@@ -43,7 +43,14 @@ const createBanner = (text, type) => {
     bannerElem.appendChild(bannerText);
     bannerElem.appendChild(formElem);
 
+    // When the dialog is closed, remove it to prevent it from filling up the DOM tree
+    bannerElem.addEventListener('close', e => {
+        bannerElem.remove();
+    });
+
     document.body.appendChild(bannerElem);
+
+    return bannerElem;
 };
 
 // A function which updates the repositories section. Takes the GitHub api response as input.
