@@ -60,11 +60,14 @@ header nav a .icon {
     display: inline-block;
 }
 
+header nav a .icon.linkedin {font-size: 0.75em;}
+
 @media (prefers-color-scheme: dark) {
     header nav a .icon {filter: invert(1)}
 }
 
-header nav a .github::before {content: url(/assets/github.svg);}
+header nav a .github::before {content: url("/assets/github.svg");}
+header nav a .linkedin::before {content: url("/assets/linkedin.svg");}
 
 @media only screen and (max-width: 1000px) {
     header .textbox {
