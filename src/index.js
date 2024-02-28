@@ -1,6 +1,7 @@
 // Import styles
 import './styles/main.css';
 import './styles/header.css';
+import './styles/about.css';
 import './styles/repos.css';
 import './styles/colors.css';
 import './styles/dialog.css';

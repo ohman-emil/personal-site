@@ -1,7 +1,3 @@
-main section#repos {
-    margin-top: 15px;
-}
-
 section#repos article {
     margin: 10px;
     border: var(--text-main) 2px solid;

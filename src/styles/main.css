@@ -32,6 +32,14 @@ main {
     margin: 0 20%;
 }
 
+main section {
+    margin-top: 15px;
+}
+
+main section article {
+    padding: 7.5px 0;
+}
+
 @media only screen and (max-width: 1000px) {
     main {
         margin: 0 25px;

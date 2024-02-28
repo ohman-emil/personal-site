@@ -1,0 +1,7 @@
+section#about ul {
+    padding-left: 2rem;
+}
+
+section#about ul li {
+    padding: 3px 0;
+}
