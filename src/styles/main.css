@@ -29,11 +29,11 @@ body {
 }
 
 main {
-    margin: 0 20%;
+    margin: 0 20% 2em 20%;
 }
 
 main section {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 main section article {
